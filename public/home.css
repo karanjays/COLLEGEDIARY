@@ -1,0 +1,62 @@
+.p-3 {
+    background-color: rgb(26, 57, 99);
+}
+
+#logo {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-top: -6px;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.notice-box {
+    margin: 3%;
+    width: 80%;
+    height: auto;
+    padding: 3%;
+    background: #1C3A61;
+    background: -webkit-linear-gradient(bottom right, #1C3A61, #011F33);
+    background: -moz-linear-gradient(bottom right, #1C3A61, #011F33);
+    background: linear-gradient(to top left, #1C3A61, #011F33);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 1px 21px 16px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 21px 16px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 21px 16px -4px rgba(0, 0, 0, 0.75);
+}
+
+.notice-box a {
+    color: rgb(12, 170, 72);
+}
+
+.blogmp {
+    padding: 1vh;
+}
+
+.scroll {
+    background-image: url("/img/college.jpg");
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    margin: 2%;
+}

@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <% for(let i in blogs){ %>
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-4 blogmp">
+                        <div class="card">
+                            <img class="card-img-top"
+                                src="https://www.emergingedtech.com/wp/wp-content/uploads/2018/04/blogging.jpg"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= blogs[i].title %>
+                                </h5>
+                                <div>Posted by :<%= blogs[i].author %>
+                                </div>
+                                <p class="card-text" style="margin-top:1% ;">
+                                    <%= blogs[i].content %>
+                                </p>
+                                <a href="/singleBlog/<%= blogs[i]._id %>" class="btn btn-info" style="float:right;">Read
+                                    More</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">
+                                    <%= blogs[i].date.toLocaleDateString('en-us', {year:"numeric", month:"short",
+                                        day:"numeric"}) %>
+                                </small>
+
+                                <span class="stats" style="float:right;">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <%= blogs[i].upvote %>
+                                        <i class="fa-solid fa-heart-crack"></i>
+                                        <%= blogs[i].downvote %>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+
+        </div>
+
+
+
+    </body>
+
+    <%- include('partials/footer') %>
