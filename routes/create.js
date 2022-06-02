@@ -3,9 +3,7 @@ const router = express.Router();
 const postcontroller = require("../controllers/postcontroller");
 
 
-router.get("/create-post",(req,res)=>{
-    res.render("post");
-});
+router.get("/create-post",postcontroller.getInputForm);
 
 router.post("/create-post",postcontroller.createNewPost);
 

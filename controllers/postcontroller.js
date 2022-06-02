@@ -1,5 +1,9 @@
 const Post=require("../model/post");
 
+exports.getInputForm=(req,res)=>{
+    res.render("post");
+}
+
 exports.createNewPost = async (req,res)=>
 {
     let postData = new Post({
