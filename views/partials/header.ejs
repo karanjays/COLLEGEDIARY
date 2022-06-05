@@ -21,13 +21,20 @@
                 <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
                 <li><a href="/blog" class="nav-link px-2 text-white">Blogs</a></li>
                 <li><a href="/notice" class="nav-link px-2 text-white">Notice</a></li>
-                <li><a href="/create-post" class="nav-link px-2 text-white">Post</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+
+                <% if(isLoggedIn) { %>
+                    <li><a href="/create-post" class="nav-link px-2 text-white">Post</a></li>
+                    <% } %>
+                        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
             </ul>
 
             <div class="text-end">
-                <button type="button" class="btn btn-outline-light me-2">Login</button>
-                <button type="button" class="btn btn-warning">Sign-up</button>
+                <% if(isLoggedIn) { %>
+                <a href="/logout"><button type="button" class="btn btn-outline-light me-2">Log Out</button></a>
+                <% } else {%>
+                <a href="/login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+                <a href="/sign-up"><button type="button" class="btn btn-warning">Sign-up</button></a>
+                <% } %>
             </div>
 
         </div>

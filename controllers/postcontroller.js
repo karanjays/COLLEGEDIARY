@@ -1,7 +1,8 @@
 const Post=require("../model/post");
 
 exports.getInputForm=(req,res)=>{
-    res.render("post");
+    res.render("post",{
+        isLoggedIn:req.session.isLoggedIn});
 }
 
 exports.createNewPost = async (req,res)=>
@@ -9,7 +10,7 @@ exports.createNewPost = async (req,res)=>
     let postData = new Post({
         title:req.body.title,
         content:req.body.content,
-        type:"notices",
+        type:"blogs",
         author:"Karan",
         date: new Date(),
         upvote: 3

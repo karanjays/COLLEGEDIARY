@@ -6,8 +6,10 @@ exports.getAllBlogs = async (req, res) => {
         const blogs = await Post.find({
             type: "blogs"
         });
+        res.setHeader('Set-Cookie', 'blogs=xys');
         res.render("blog", {
-            blogs: blogs
+            blogs: blogs,
+            isLoggedIn: req.session.isLoggedIn
         });
     } catch (err) {
         console.log(err);
@@ -20,7 +22,8 @@ exports.getAllNotices = async (req, res) => {
             type: "notices"
         });
         res.render("notice", {
-            notices
+            notices,
+            isLoggedIn: req.session.isLoggedIn
         });
     } catch (err) {
         console.log(err);
