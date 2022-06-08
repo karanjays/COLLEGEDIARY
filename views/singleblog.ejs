@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+    <body>
+        <script src="/js/singleblog.js"></script>
+        <p id="blogid" style="display: none;"><%= blog._id %></p>
+        <div class="container" style="padding:3% 5% 3% 20%">
+            <img class="card-img-top"  style="height:500px;width:500px;" src="https://www.emergingedtech.com/wp/wp-content/uploads/2018/04/blogging.jpg"
+                alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <%= blog.title %>
+                </h5>
+                <div>Posted by :<%= blog.author %>
+                </div>
+                <p class="card-text" style="margin-top:1% ;">
+                    <%= blog.content %>
+                </p>
+            </div>
+            <div class="card-footer">
+                <span class="stats">
+                    <button onclick="upvoted()"><i class="fa-solid fa-heart"></i></button>
+                    <karan id="s1"><%= blog.upvote %></karan>
+                    <button onclick="downvoted()"><i class="fa-solid fa-heart-crack"></i></button>
+                    <karan id="s23"><%= blog.downvote %></karan>
+                </span>
+                <br>
+                <small class="text-muted">
+                    <%= blog.date.toLocaleDateString('en-us', {year:"numeric", month:"short", day:"numeric"}) %>
+                </small>
+            </div>
+        </div>
+    </body>
+
+    <%- include('partials/footer') %>

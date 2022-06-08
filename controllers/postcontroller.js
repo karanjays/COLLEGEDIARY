@@ -1,8 +1,7 @@
 const Post=require("../model/post");
 
 exports.getInputForm=(req,res)=>{
-    res.render("post",{
-        isLoggedIn:req.session.isLoggedIn});
+    res.render("post",{isLoggedIn:req.session.isLoggedIn});
 }
 
 exports.createNewPost = async (req,res)=>
@@ -43,7 +42,7 @@ exports.createNewPost = async (req,res)=>
     // console.log(postData);
     const blogs = await Post.find({});
     // console.log(blogs);
-    res.render("home");
+    res.render("home",{isLoggedIn:req.session.isLoggedIn});
     }catch(err)
     {
         console.log(err);

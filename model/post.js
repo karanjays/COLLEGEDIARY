@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 let postschema = new mongoose.Schema({
+
     title: {
         type: String,
         required: true
@@ -19,11 +20,16 @@ let postschema = new mongoose.Schema({
     },
     upvote: {
         type: Number,
+
         default: 0
     },
     downvote: {
         type: Number,
         default: 0
+    },
+    like:{
+        type: Array,
+        default: []
     }
 });
 

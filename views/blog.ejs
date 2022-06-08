@@ -6,17 +6,17 @@
             <div class="row">
                 <% for(let i in blogs){ %>
                     <div class="col-12 col-sm-8 col-md-6 col-lg-4 blogmp">
-                        <div class="card">
-                            <img class="card-img-top"
+                        <div class="card" style="background-color:rgb(250, 235, 215);">
+                            <!-- <img class="card-img-top"
                                 src="https://www.emergingedtech.com/wp/wp-content/uploads/2018/04/blogging.jpg"
-                                alt="Card image cap">
+                                alt="Card image cap"> -->
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <%= blogs[i].title %>
                                 </h5>
                                 <div>Posted by :<%= blogs[i].author %>
                                 </div>
-                                <p class="card-text" style="margin-top:1% ;">
+                                <p class="card-text" style="margin-top:1% ;height: 6vh; overflow: hidden;">
                                     <%= blogs[i].content %>
                                 </p>
                                 <a href="/singleBlog/<%= blogs[i]._id %>" class="btn btn-info" style="float:right;">Read

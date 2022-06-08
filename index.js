@@ -29,9 +29,7 @@ app.use(postrouts);
 app.get("/",(req,res)=>
 {
     const isLoggedIn=req.session.isLoggedIn;
-    console.log(isLoggedIn);
     res.render('home',{isLoggedIn});
-    // res.render('home');
 });
 
 
